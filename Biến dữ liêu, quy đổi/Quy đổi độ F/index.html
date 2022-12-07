@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Độ F</title>
+</head>
+<body>
+  <h1>QUY ĐỔI ĐỘ C SANG ĐỘ F</h1>
+  <h2 id="ket_qua"> Độ C là :  </h2>
+  <table>
+    <tr>
+      <th> NHập độ C </th>
+      <td><input type="text" name=" " id="temperature"></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td> <button onclick="avg()" > Sang Độ F </button></td>
+    </tr>
+  </table>
+  <script>
+    function avg() {
+      let temperature = +document.getElementById("temperature").value;
+
+      let avg =(temperature*9)/5 +32;
+      console.log(avg)
+      document.getElementById('ket_qua').innerHTML='Quy đổi đ F :' + avg;
+    }
+    //  avg()
+  </script>
+</body>
+</html>

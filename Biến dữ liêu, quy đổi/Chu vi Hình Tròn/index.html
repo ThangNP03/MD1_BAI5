@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu vi hình tròn</title>
+</head>
+<body>
+<h1>TÍNH CHU VIHÌNH TRÒN</h1>
+<h2 id="ket_qua"> Diện tích là :  </h2>
+<table>
+    <tr>
+        <th> Nhập bán kính </th>
+        <td><input type="text" name=" " id="bankinh"></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td> <button onclick="avg()" > Diện tích là </button></td>
+    </tr>
+</table>
+<script>
+    function avg() {
+
+        let bankinh = +document.getElementById("bankinh").value;
+
+        let avg =(bankinh * 2 * 3.14);
+        console.log(avg)
+        document.getElementById('ket_qua').innerHTML='Diện tích là :' + avg;
+    }
+    //  avg()
+</script>
+</body>
+</html>

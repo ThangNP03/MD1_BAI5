@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>java</title>
+
+</head>
+<body>
+     <h1> TÍNH ĐIỂM TRUNG BÌNH CUỦA HỌC SINH</h1>
+     <h2 id="ket_qua"> Điểm trung bình :  </h2>
+    <table>
+        <tr>
+            <th> Toán </th>
+            <td><input type="text" name=" " id="toan"></td>
+        </tr>
+        <tr>
+            <th>Lý </th>
+            <td><input type="text" name=" " id="ly"  ></td>
+        </tr>
+        <tr>
+            <th>
+                Hóa
+            </th>
+            <td><input type="text" name=" " id="hoa"  ></td>
+        </tr>
+       <tr>
+           <th></th>
+           <td> <button  onclick="avg()" style="margin-top:10px"> Điểm trung bình </button></td>
+       </tr>
+    </table>
+<script>
+   function avg() {
+       let toan = +document.getElementById("toan").value;
+       let ly = +document.getElementById("ly").value;
+       let hoa = +document.getElementById("hoa").value;
+
+       let avg = (toan+ly+hoa)/3;
+       console.log(avg)
+       document.getElementById('ket_qua').innerHTML='Điểm trung bình :' + avg;
+   }
+   //  avg()
+</script>
+</body>
+</html>

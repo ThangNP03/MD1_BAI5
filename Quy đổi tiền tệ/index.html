@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quy đổi tiền tệ</title>
+</head>
+<body>
+
+    <form >
+            <table style="width: 40%">
+                <tr>
+                    <th>Amount</th>
+                    <th>From Currency</th>
+                    <th>To Currency</th>
+                </tr>
+                <tr>
+                    <td style="text-align: center"><input type="text" name="" id="amount"></td>
+                    <td style="text-align: center">
+                        <select onchange="from_to()" id="from">
+                            <option value="vietnam">Việt Nam</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </td>
+                    <td style="text-align: center">
+                        <select onchange="to_from()" id ="to" name="to">
+                            <option value="USD" >USD</option>
+                            <option value="VND">VND</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="button"  onclick="exchange()">result</button>
+                    </td>
+                    <div id="result"></div>
+                </tr>
+            </table>
+    </form>
+<script>
+
+//
+//   }
+     function exchange() {
+         let input = +document.getElementById('amount').value
+         let from = +document.getElementById('from').value
+         let  to = +document.getElementById('to').value
+         let result;
+         console.log('from',from)
+
+         if (from==to){
+             result= input
+         }
+         else {
+           if(from=="USD"){
+               result=input*24000
+           }
+           else {
+               result= input/24000
+           }
+         }
+
+         document.getElementById('result').innerHTML= "Result" + to;
+         console.log('result')
+     }
+
+</script>
+    function from_to() {
+    //       if (document.getElementById('from').options[0].selected){
+    //           document.getElementById('to').options[0].selected = true;
+    //       }
+    //       else{
+    //           document.getElementById('to').options[1].selected =true;
+    //       }
+    //
+    //   }
+    //   function to_from() {
+    //       if (document.getElementById('to').options[0].selected){
+    //           document.getElementById('from').options[0].selected = true;
+    //       } else {
+    //           document.getElementById('from').options[1].selected = true;
+    //       }
+    //   }
+    //   function exchange() {
+    //       let y
+    //       let x = document.getElementById('amount').value;
+    //       if (document.getElementById('from').options[0].selected){
+    //           y = parseInt(x)/ 24365
+    //       }
+    //       else if (document.getElementById('from').options[1].selected){
+    //           y = parseInt(x)*24365
+    //       }
+    //       document.getElementById('result').innerHTML="Result =" + y;
+</body>
+</html>
